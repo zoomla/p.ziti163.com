@@ -4,10 +4,12 @@
 - [智图网客户端系统](#智图网客户端系统)
 - [Zoomla!逐浪CMS卓越出品](#zoomla逐浪cms卓越出品)
     - [精品网页项目](#精品网页项目)
+    - [开发调试](#开发调试)
         - [禁用右键:](#禁用右键)
         - [解决跨域资源请求问题](#解决跨域资源请求问题)
         - [调式模式配置](#调式模式配置)
         - [白屏](#白屏)
+- [发布成品效果](#发布成品效果)
 
 <!-- /TOC -->
 
@@ -55,6 +57,12 @@ QQ交流群号：
 
 官方QQ客服：
 [![官方QQ客服1](https://img.shields.io/badge/官方QQ客服1-524979923-red.svg?style=for-the-badge&logo=appveyor)](http://wpa.qq.com/msgrd?v=3&uin=745151353&site=qq&menu=yes)  [![官方QQ客服2](https://img.shields.io/badge/官方QQ客服2-1799661890-red.svg?style=for-the-badge&logo=appveyor)](http://wpa.qq.com/msgrd?v=3&uin=1799661890&site=qq&menu=yes) 
+
+## 开发调试
+
+项目启动目录：`\ZL_Photo\`
+
+Debug调试时，将`ZL_Photo\assest`复制到`\ZL_Photo\bin\x64\Debug`目录下，启动才会有界面。
 
 ###  禁用右键:
 ```
@@ -117,3 +125,16 @@ CEFSharp加载完页面后会出现黑屏或者白屏现象，应该是渲染失
     Browser.Refresh();
  });
 ```
+
+
+# 发布成品效果
+![imgname](demo-show-发布成品效果图/01.jpg)
+![imgname](demo-show-发布成品效果图/02.jpg)
+![imgname](demo-show-发布成品效果图/03.jpg)
+![imgname](demo-show-发布成品效果图/04.jpg)
+![imgname](demo-show-发布成品效果图/05.jpg)
+![imgname](demo-show-发布成品效果图/06.jpg)
+![imgname](demo-show-发布成品效果图/07.jpg)
+![imgname](demo-show-发布成品效果图/08.jpg)
+![imgname](demo-show-发布成品效果图/09.jpg)
+![imgname](demo-show-发布成品效果图/10.jpg)

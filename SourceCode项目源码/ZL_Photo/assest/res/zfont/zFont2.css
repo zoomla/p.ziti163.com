@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "zFont2";
+    src: url("zFont2.eot"); /* IE9 */
+    src: url("zFont2.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("zFont2.woff") format("woff"), /* chrome、firefox */
+    url("zFont2.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("zFont2.svg#zFont2") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
