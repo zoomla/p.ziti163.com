@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.props" Condition="Exists('..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.props')" />
+  <Import Project="..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props')" />
+  <Import Project="..\packages\CefSharp.Wpf.51.0.0\build\CefSharp.Wpf.props" Condition="Exists('..\packages\CefSharp.Wpf.51.0.0\build\CefSharp.Wpf.props')" />
+  <Import Project="..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FFEF137-761B-4088-AB1B-4F628C6A211A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZL_Photo</RootNamespace>
+    <AssemblyName>智图</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fav.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.2.2\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluent, Version=7.0.0.0, Culture=neutral, PublicKeyToken=3e436e32a8c5546f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fluent.Ribbon.7.1.0\lib\net462\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Administration, Version=7.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZLCommon">
+      <HintPath>bin\ZLCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BLL\GlobalConfig.cs" />
+    <Compile Include="BLL\HttpClient.cs" />
+    <Compile Include="BLL\HttpResponseMessage.cs" />
+    <Compile Include="BrowserHandler\ContextMenuHandler.cs" />
+    <Compile Include="BrowserHandler\DownloadHandler.cs" />
+    <Compile Include="BrowserHandler\KeyboardHandler.cs" />
+    <Compile Include="BrowserHandler\LifeSpanHandler.cs" />
+    <Compile Include="Common\function.cs" />
+    <Compile Include="Model\RDP\DataProtection.cs" />
+    <Compile Include="Theme\WindowBase.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\FZHelper.cs" />
+    <Compile Include="Common\ServicesHelper.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Theme\Black\WindowBaseStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="assest\app.html" />
+    <Content Include="assest\loading.html" />
+    <Content Include="assest\res\css\animate.min.css" />
+    <Content Include="assest\res\css\bootstrap4.min.css" />
+    <Content Include="assest\res\css\swiper.min.css" />
+    <Content Include="assest\res\css\Zfonts.css" />
+    <Content Include="assest\res\css\zico.css" />
+    <Content Include="assest\res\css\zico.min.css" />
+    <Content Include="assest\res\css\zico_gov.css" />
+    <Content Include="assest\res\css\zico_gov.min.css" />
+    <Content Include="assest\res\css\zico_tm.css" />
+    <Content Include="assest\res\css\zico_tm.min.css" />
+    <Content Include="assest\res\fonts\zi-gov.svg" />
+    <Content Include="assest\res\fonts\zi-regular.svg" />
+    <Content Include="assest\res\fonts\zi-tm.svg" />
+    <Content Include="assest\res\js\bootstrap4.min.js" />
+    <Content Include="assest\res\js\jquery.min.js" />
+    <Content Include="assest\res\js\zico.js" />
+    <Content Include="assest\res\js\zico.min.js" />
+    <Content Include="assest\res\vue\vue-comp.js" />
+    <Content Include="assest\res\vue\vue-route.js" />
+    <Content Include="assest\res\vue\vue.common.js" />
+    <Content Include="assest\res\vue\vue.esm.browser.js" />
+    <Content Include="assest\res\vue\vue.esm.js" />
+    <Content Include="assest\res\vue\vue.js" />
+    <Content Include="assest\res\vue\vue.min.js" />
+    <Content Include="assest\res\vue\vue.runtime.common.js" />
+    <Content Include="assest\res\vue\vue.runtime.esm.js" />
+    <Content Include="assest\res\vue\vue.runtime.js" />
+    <Content Include="assest\res\vue\vue.runtime.min.js" />
+    <Content Include="assest\res\zfont\zFont1-embed.css" />
+    <Content Include="assest\res\zfont\zFont1.css" />
+    <Content Include="assest\res\zfont\zFont1.svg" />
+    <Content Include="assest\res\zfont\zFont2-embed.css" />
+    <Content Include="assest\res\zfont\zFont2.css" />
+    <Content Include="assest\res\zfont\zFont2.svg" />
+    <Content Include="assest\res\zfont\Zoomlabaoren-A102.svg" />
+    <Content Include="assest\res\zfont\ZoomlaCarved-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaCarved.svg" />
+    <Content Include="assest\res\zfont\ZoomlaChongyuan-A006.svg" />
+    <Content Include="assest\res\zfont\ZoomlaGaiShiHero-A050-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaGaiShiHero-A050.svg" />
+    <Content Include="assest\res\zfont\ZoomlaGetelove-A014.svg" />
+    <Content Include="assest\res\zfont\ZoomlaJinnong-A106-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaJinnong-A106.svg" />
+    <Content Include="assest\res\zfont\ZoomlaLingHei-A056-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaLingHei-A056.svg" />
+    <Content Include="assest\res\zfont\ZoomlaMalie-A038-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaMalie-A038.svg" />
+    <Content Include="assest\res\zfont\ZoomlaShuaisong-A028-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaShuaisong-A028.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXiangJiao-A025.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ2-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ2.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ2.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ3-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ3.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ3.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ4-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ4.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ5-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ5.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ6-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXingtiJ6.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXSongExtraLight-embed.css" />
+    <Content Include="assest\res\zfont\ZoomlaXSongExtraLight.css" />
+    <Content Include="assest\res\zfont\ZoomlaXSongExtraLight.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXSongExtraLightsm.svg" />
+    <Content Include="assest\res\zfont\ZoomlaXSongExtraLightxs.svg" />
+    <Content Include="assest\res\zfont\ZoomlaYayu-A019.svg" />
+    <Content Include="assest\res\zfont\Zoomlayinxiangxili-A031-embed.css" />
+    <Content Include="assest\res\zfont\Zoomlayinxiangxili-A031.svg" />
+    <Content Include="assest\res\zfont\ZoomlaYuan-A016.svg" />
+    <Content Include="assest\style\global.css" />
+    <Resource Include="assest\style\images\icon1.jpg" />
+    <Resource Include="assest\style\images\icon2.jpg" />
+    <Resource Include="assest\style\images\icon3.jpg" />
+    <Resource Include="assest\style\images\icon4.jpg" />
+    <Content Include="assest\style\images\logo.svg" />
+    <Resource Include="assest\style\images\ren1.jpg" />
+    <Resource Include="assest\style\images\ren2.jpg" />
+    <Resource Include="assest\style\images\ren3.jpg" />
+    <Resource Include="assest\style\images\ren4.jpg" />
+    <Resource Include="assest\style\images\ren5.jpg" />
+    <Resource Include="assest\style\images\ren6.jpg" />
+    <Resource Include="assest\style\images\ren7.jpg" />
+    <Resource Include="assest\style\images\ren8.jpg" />
+    <Content Include="assest\style\js\global.js" />
+    <Content Include="assest\style\js\header.js" />
+    <Content Include="assest\style\js\main.js" />
+    <Content Include="Config\Install\Microsoft.Web.Administration.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Install\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Install\ZoomLa.Model.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Install\ZoomlaCMS_Sites.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\sql.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="logo.png" />
+    <Resource Include="Config\TemplateRDP.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fav.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Config\global.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\model.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="app.config" />
+    <None Include="assest\res\css\zico.css.map" />
+    <None Include="assest\res\css\zico_gov.css.map" />
+    <None Include="assest\res\css\zico_tm.css.map" />
+    <None Include="assest\res\fonts\zi-gov.eot" />
+    <Resource Include="assest\res\fonts\zi-gov.ttf" />
+    <None Include="assest\res\fonts\zi-gov.woff" />
+    <None Include="assest\res\fonts\zi-regular.eot" />
+    <Resource Include="assest\res\fonts\zi-regular.ttf" />
+    <None Include="assest\res\fonts\zi-regular.woff" />
+    <None Include="assest\res\fonts\zi-tm.eot" />
+    <Resource Include="assest\res\fonts\zi-tm.ttf" />
+    <None Include="assest\res\fonts\zi-tm.woff" />
+    <None Include="assest\res\zfont\zFont1.eot" />
+    <Resource Include="assest\res\zfont\zFont1.ttf" />
+    <None Include="assest\res\zfont\zFont1.woff" />
+    <None Include="assest\res\zfont\zFont2.eot" />
+    <Resource Include="assest\res\zfont\zFont2.ttf" />
+    <None Include="assest\res\zfont\zFont2.woff" />
+    <None Include="assest\res\zfont\Zoomlabaoren-A102.eot" />
+    <Resource Include="assest\res\zfont\Zoomlabaoren-A102.ttf" />
+    <None Include="assest\res\zfont\Zoomlabaoren-A102.woff" />
+    <None Include="assest\res\zfont\ZoomlaCarved.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaCarved.ttf" />
+    <None Include="assest\res\zfont\ZoomlaCarved.woff" />
+    <None Include="assest\res\zfont\ZoomlaChongyuan-A006.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaChongyuan-A006.ttf" />
+    <None Include="assest\res\zfont\ZoomlaChongyuan-A006.woff" />
+    <None Include="assest\res\zfont\ZoomlaGaiShiHero-A050.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaGaiShiHero-A050.ttf" />
+    <None Include="assest\res\zfont\ZoomlaGaiShiHero-A050.woff" />
+    <None Include="assest\res\zfont\ZoomlaGetelove-A014.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaGetelove-A014.ttf" />
+    <None Include="assest\res\zfont\ZoomlaGetelove-A014.woff" />
+    <None Include="assest\res\zfont\ZoomlaJinnong-A106.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaJinnong-A106.ttf" />
+    <None Include="assest\res\zfont\ZoomlaJinnong-A106.woff" />
+    <None Include="assest\res\zfont\ZoomlaLingHei-A056.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaLingHei-A056.ttf" />
+    <None Include="assest\res\zfont\ZoomlaLingHei-A056.woff" />
+    <None Include="assest\res\zfont\ZoomlaMalie-A038.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaMalie-A038.ttf" />
+    <None Include="assest\res\zfont\ZoomlaMalie-A038.woff" />
+    <None Include="assest\res\zfont\ZoomlaShuaisong-A028.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaShuaisong-A028.ttf" />
+    <None Include="assest\res\zfont\ZoomlaShuaisong-A028.woff" />
+    <None Include="assest\res\zfont\ZoomlaXiangJiao-A025.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXiangJiao-A025.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXiangJiao-A025.woff" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ.woff" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ2.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ2.otf" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ2.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ2.woff" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ3.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ3.otf" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ3.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ3.woff" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ4.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ4.otf" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ4.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ4.woff" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ5.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ5.otf" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ5.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ5.woff" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ6.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ6.otf" />
+    <Resource Include="assest\res\zfont\ZoomlaXingtiJ6.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXingtiJ6.woff" />
+    <None Include="assest\res\zfont\ZoomlaXSongExtraLight.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXSongExtraLight.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXSongExtraLight.woff" />
+    <None Include="assest\res\zfont\ZoomlaXSongExtraLightsm.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXSongExtraLightsm.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXSongExtraLightsm.woff" />
+    <None Include="assest\res\zfont\ZoomlaXSongExtraLightxs.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaXSongExtraLightxs.ttf" />
+    <None Include="assest\res\zfont\ZoomlaXSongExtraLightxs.woff" />
+    <None Include="assest\res\zfont\ZoomlaYayu-A019.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaYayu-A019.ttf" />
+    <None Include="assest\res\zfont\ZoomlaYayu-A019.woff" />
+    <None Include="assest\res\zfont\Zoomlayinxiangxili-A031.eot" />
+    <Resource Include="assest\res\zfont\Zoomlayinxiangxili-A031.ttf" />
+    <None Include="assest\res\zfont\Zoomlayinxiangxili-A031.woff" />
+    <None Include="assest\res\zfont\ZoomlaYuan-A016.eot" />
+    <Resource Include="assest\res\zfont\ZoomlaYuan-A016.ttf" />
+    <None Include="assest\res\zfont\ZoomlaYuan-A016.woff" />
+    <None Include="assest\style\global.css.map" />
+    <None Include="assest\style\global.scss" />
+    <None Include="assest\style\_zoomlaCMS.scss" />
+    <None Include="Config\Install\Install.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Install\InstallUtil.InstallLog">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Install\Uninstall.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Install\ZoomlaCMS_Sites.InstallLog">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\cef.redist.x64.3.2704.1432\build\cef.redist.x64.targets" Condition="Exists('..\packages\cef.redist.x64.3.2704.1432\build\cef.redist.x64.targets')" />
+  <Import Project="..\packages\cef.redist.x86.3.2704.1432\build\cef.redist.x86.targets" Condition="Exists('..\packages\cef.redist.x86.3.2704.1432\build\cef.redist.x86.targets')" />
+  <Import Project="..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.Wpf.51.0.0\build\CefSharp.Wpf.targets" Condition="Exists('..\packages\CefSharp.Wpf.51.0.0\build\CefSharp.Wpf.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.79.1.36\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.79.1.36\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.79.1.360\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.targets" Condition="Exists('..\packages\CefSharp.Wpf.79.1.360\build\CefSharp.Wpf.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

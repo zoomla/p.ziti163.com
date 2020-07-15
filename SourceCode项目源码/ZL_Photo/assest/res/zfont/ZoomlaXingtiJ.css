@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "ZoomlaXingtiJ";
+    src: url("ZoomlaXingtiJ.eot"); /* IE9 */
+    src: url("ZoomlaXingtiJ.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("ZoomlaXingtiJ.woff") format("woff"), /* chrome、firefox */
+    url("ZoomlaXingtiJ.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("ZoomlaXingtiJ.svg#ZoomlaXingtiJ") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
